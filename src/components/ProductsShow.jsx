@@ -7,9 +7,9 @@ const style = {
 }
 
 function ProductsShow(props) {
-    const {products, searchValue, inStock, manufacturerSelect, modelSelect, minPrice, maxPrice} = props;
+    const {phones, searchValue, inStock, manufacturerSelect, modelSelect, minPrice, maxPrice} = props;
 
-    let filterProducts = products.phones.filter((item) =>
+    let filterProducts = phones.filter((item) =>
         item.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1
     )
 

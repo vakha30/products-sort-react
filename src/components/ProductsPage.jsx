@@ -59,7 +59,7 @@ class ProductsPage extends React.Component {
     }
 
     render() {
-        const products = this.props.products;
+        const {phones} = this.props;
         const {inStock, searchValue, manufacturerSelect, modelSelect, minPrice, maxPrice} = this.state
         return (
             <div style={style.productPageWrap}>
@@ -70,7 +70,7 @@ class ProductsPage extends React.Component {
                     modelSelect={modelSelect}
                     minPrice={minPrice}
                     maxPrice={maxPrice}
-                    products={products}
+                    phones={phones}
                     onInputSearch={this.onInputSearch}
                     onInputCheckbox={this.onInputCheckbox}
                     onInputSelectManufacturer={this.onInputSelectManufacturer}
@@ -79,7 +79,7 @@ class ProductsPage extends React.Component {
                     onInputMaxPrice={this.onInputMaxPrice}
                 />
                 <ProductsShow
-                    products={products}
+                    phones={phones}
                     searchValue={searchValue}
                     inStock={inStock}
                     manufacturerSelect={manufacturerSelect}

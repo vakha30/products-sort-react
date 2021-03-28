@@ -74,12 +74,12 @@ class FilterInput extends React.Component {
 
     render() {
         const {inStock, searchValue, manufacturerSelect, modelSelect, minPrice, maxPrice} = this.props;
-        const {products} = this.props;
-        const productsManufacturer = this.getManufacturers(products.phones.slice());
+        const {phones} = this.props;
+        const productsManufacturer = this.getManufacturers(phones);
         const productsManufacturerOptions = productsManufacturer.map((item, index) =>
             <OptionSelect key={item} data={item} />
         )
-        const productsModel = this.getModels(products.phones.slice(), manufacturerSelect);
+        const productsModel = this.getModels(phones, manufacturerSelect);
 
 
 
