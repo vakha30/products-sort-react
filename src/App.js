@@ -15,7 +15,7 @@ function App() {
             setProducts(data.phones)
         })
     }, [])
-    // console.log(products)
+    
     return (
         <div>
             <ProductsPage phones={products} />
